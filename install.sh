@@ -91,18 +91,9 @@ echo
 # Install thefuck
 print_header "Installing thefuck"
 if ! command -v thefuck &> /dev/null; then
-    if command -v pip3 &> /dev/null; then
-        print_info "Installing thefuck via pip3..."
-        pip3 install --user thefuck
-        print_success "thefuck installed successfully"
-    elif command -v pip &> /dev/null; then
-        print_info "Installing thefuck via pip..."
-        pip install --user thefuck
-        print_success "thefuck installed successfully"
-    else
-        print_warning "pip not found. Skipping thefuck installation."
-        print_info "You can install it later with: pip3 install --user thefuck"
-    fi
+    print_info "Installing thefuck via package manager..."
+    $PM_INSTALL thefuck
+    print_success "thefuck installed successfully"
 else
     print_warning "thefuck is already installed"
 fi
