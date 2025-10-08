@@ -113,6 +113,7 @@ print_header "Installing configuration files"
 mkdir -p ~/.config/fish
 mkdir -p ~/.config/kitty
 mkdir -p ~/.config/neofetch
+mkdir -p ~/.config/fastfetch
 
 print_info "Copying fish config..."
 cp -r fish/* ~/.config/fish/
@@ -125,6 +126,10 @@ print_success "Kitty config installed"
 print_info "Copying neofetch config..."
 cp -r neofetch/* ~/.config/neofetch/
 print_success "Neofetch config installed"
+
+print_info "Copying fastfetch config..."
+cp -r fastfetch/* ~/.config/fastfetch/
+print_success "Fastfetch config installed"
 echo
 
 # Configure doas
