@@ -1,3 +1,4 @@
+# fish config -ver Hola 0.1
 function fish_prompt
     # Track command execution time
     set -l cmd_duration ""
@@ -261,6 +262,9 @@ end
 # Remove the welcome message
 function fish_greeting
 end
+
+# Set autosuggestion color (command hints from history and system)
+set -g fish_color_autosuggestion 5465f7
 
 # alias code=code-insiders
 thefuck --alias | source
